@@ -1,0 +1,40 @@
+import random
+Userscore=0
+Computerscore=0
+options=['Rock','Paper','Scissor']
+while True:
+ UserOption=input("Enter your choice(Rock/Paper/Scissor)or(Quit or Continue)")
+ if UserOption=='Quit':
+    print("Thanks for playing")
+    break
+ if UserOption=='Continue':
+    print("Thanks for continuing")
+    continue
+ ComputerOption=random.choice(options)
+ print('Computer option is:',ComputerOption)
+ if UserOption=='Paper' and ComputerOption=='Rock':
+    print("User wins!")
+    Userscore+=1
+ elif UserOption=='Rock' and ComputerOption=='Scissor':
+    print("User wins!")
+    Userscore+=1
+ elif UserOption=='Scissor' and ComputerOption=='Paper':
+    print("User wins!")
+    Userscore+=1
+ elif UserOption=='Paper' and ComputerOption=='Scissor':
+    print("Computer wins!")
+    Computerscore+=1
+ elif UserOption=='Scissor' and ComputerOption=='Rock':
+    print("Computer wins!")
+    Computerscore+=1
+ elif UserOption=='Rock' and ComputerOption=='Paper':
+    print("Computer wins!")
+    Computerscore+=1
+ elif UserOption==ComputerOption:
+    print("Tie or Draw")
+ else:
+    print("Invalid input")
+ print("Current score of user is:",Userscore)
+ print("Current score of computer is:",Computerscore)
+
+    
